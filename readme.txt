@@ -5,3 +5,9 @@ FlashCard.py
 - pulls index 0 value from a shuffled list, as cards are displayed (Next Card button) they are removed from the original shuffled list
 - repeat card adds current card to repeatcards list
 - once both shuffled and repeatcard list contain no more items, application closes.
+
+
+Changes to make
+- change timer to 3 sec countdown until next card
+- add 2 second pause between cards
+- Add results/score to display as popup at the end
