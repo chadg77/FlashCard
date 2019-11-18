@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file 'flashCard_GUI.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.1
+# Created by: PyQt5 UI code generator 5.9.2
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -16,7 +15,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.currentCard = QtWidgets.QTextEdit(self.centralwidget)
-        self.currentCard.setGeometry(QtCore.QRect(110, 70, 641, 251))
+        self.currentCard.setGeometry(QtCore.QRect(20, 100, 871, 351))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(144)
@@ -26,7 +25,7 @@ class Ui_MainWindow(object):
         self.currentCard.setReadOnly(False)
         self.currentCard.setObjectName("currentCard")
         self.nextCard = QtWidgets.QPushButton(self.centralwidget)
-        self.nextCard.setGeometry(QtCore.QRect(460, 350, 241, 51))
+        self.nextCard.setGeometry(QtCore.QRect(320, 480, 241, 51))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setBold(True)
@@ -35,10 +34,10 @@ class Ui_MainWindow(object):
         self.nextCard.setStyleSheet("background-color: rgb(98, 171, 255);")
         self.nextCard.setObjectName("nextCard")
         self.repeatList = QtWidgets.QListWidget(self.centralwidget)
-        self.repeatList.setGeometry(QtCore.QRect(840, 50, 131, 421))
+        self.repeatList.setGeometry(QtCore.QRect(910, 100, 131, 351))
         self.repeatList.setObjectName("repeatList")
         self.repeatCard = QtWidgets.QPushButton(self.centralwidget)
-        self.repeatCard.setGeometry(QtCore.QRect(170, 350, 241, 51))
+        self.repeatCard.setGeometry(QtCore.QRect(60, 480, 241, 51))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setBold(True)
@@ -47,38 +46,27 @@ class Ui_MainWindow(object):
         self.repeatCard.setStyleSheet("background-color: rgb(253, 135, 157);")
         self.repeatCard.setObjectName("repeatCard")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(860, 10, 91, 31))
+        self.label.setGeometry(QtCore.QRect(930, 70, 101, 21))
         font = QtGui.QFont()
         font.setFamily("Arial")
-        font.setPointSize(10)
+        font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
         self.label.setFont(font)
         self.label.setObjectName("label")
-        self.lcd = QtWidgets.QLCDNumber(self.centralwidget)
-        self.lcd.setGeometry(QtCore.QRect(813, 510, 201, 41))
-        self.lcd.setObjectName("lcd")
-        self.start = QtWidgets.QPushButton(self.centralwidget)
-        self.start.setGeometry(QtCore.QRect(320, 440, 241, 51))
+        self.selectList = QtWidgets.QPushButton(self.centralwidget)
+        self.selectList.setGeometry(QtCore.QRect(20, 30, 251, 41))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setBold(True)
         font.setWeight(75)
-        self.start.setFont(font)
-        self.start.setStyleSheet("background-color: rgb(190, 190, 190);")
-        self.start.setObjectName("start")
-        self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(820, 490, 141, 21))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_2.setFont(font)
-        self.label_2.setObjectName("label_2")
+        self.selectList.setFont(font)
+        self.selectList.setAutoFillBackground(False)
+        self.selectList.setStyleSheet("background-color: rgb(179, 179, 179)")
+        self.selectList.setObjectName("selectList")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1052, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1052, 22))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -94,7 +82,15 @@ class Ui_MainWindow(object):
         self.nextCard.setText(_translate("MainWindow", "NEXT CARD"))
         self.repeatCard.setText(_translate("MainWindow", "REPEAT CARD"))
         self.label.setText(_translate("MainWindow", "Repeat Cards"))
-        self.start.setText(_translate("MainWindow", "START TIMER"))
-        self.label_2.setText(_translate("MainWindow", "Total Time"))
+        self.selectList.setText(_translate("MainWindow", "Select Card List"))
 
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
 
