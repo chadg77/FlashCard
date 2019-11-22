@@ -39,3 +39,9 @@ where
 who
 with
 would
+sugar
+cap
+cape
+vanilla
+bake
+baking
