@@ -6,29 +6,52 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1052</width>
-    <height>621</height>
+    <width>1050</width>
+    <height>660</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>1050</width>
+    <height>660</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1050</width>
+    <height>660</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Futura</family>
+    <pointsize>14</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
   <property name="windowTitle">
-   <string>Flashcards</string>
+   <string>What's That Word?</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTextEdit" name="currentCard">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>100</y>
+      <y>90</y>
       <width>871</width>
       <height>351</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Arial</family>
+      <family>American Typewriter</family>
       <pointsize>144</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="readOnly">
@@ -38,15 +61,16 @@
    <widget class="QPushButton" name="nextCard">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>480</y>
+      <x>280</x>
+      <y>450</y>
       <width>241</width>
       <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Arial</family>
+      <family>Futura</family>
+      <pointsize>14</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -61,8 +85,8 @@
    <widget class="QListWidget" name="repeatList">
     <property name="geometry">
      <rect>
-      <x>910</x>
-      <y>100</y>
+      <x>900</x>
+      <y>90</y>
       <width>131</width>
       <height>351</height>
      </rect>
@@ -71,15 +95,16 @@
    <widget class="QPushButton" name="repeatCard">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>480</y>
+      <x>20</x>
+      <y>450</y>
       <width>241</width>
       <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Arial</family>
+      <family>Futura</family>
+      <pointsize>14</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -94,18 +119,18 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>930</x>
-      <y>70</y>
-      <width>101</width>
-      <height>21</height>
+      <x>910</x>
+      <y>50</y>
+      <width>121</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Arial</family>
-      <pointsize>13</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>American Typewriter</family>
+      <pointsize>18</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
@@ -117,13 +142,14 @@
      <rect>
       <x>20</x>
       <y>30</y>
-      <width>251</width>
-      <height>41</height>
+      <width>241</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Arial</family>
+      <family>Futura</family>
+      <pointsize>14</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -135,7 +161,7 @@
      <string notr="true">background-color: rgb(179, 179, 179)</string>
     </property>
     <property name="text">
-     <string>Select Card List</string>
+     <string>Load Flashcards</string>
     </property>
    </widget>
   </widget>
@@ -144,7 +170,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1052</width>
+     <width>1050</width>
      <height>22</height>
     </rect>
    </property>
