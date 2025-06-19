@@ -3,8 +3,8 @@ import sys, getopt, os
 from PyQt5 import QtCore, QtWidgets, QtGui, Qt
 from flashCard_GUI import Ui_MainWindow
 
-repeatcards = []
-shuffledList = []
+repeat_cards = []
+shuffled_List = []
 
 def add_item(list, item):
 	list.append(item)
@@ -22,46 +22,46 @@ class MyFlashcardProgram(Ui_MainWindow):
 	
 
 	def addInputTextToTextDisplay(self):
-		global shuffledList,repeatcards
-		if len(shuffledList) > 0:
-			self.new_card = shuffledList[0]
+		global shuffled_List,repeat_cards
+		if len(shuffled_List) > 0:
+			self.new_card = shuffled_List[0]
 			self.currentCard.clear()
 			self.currentCard.append(self.new_card)
-			shuffledList.remove(self.new_card)
-		elif len(repeatcards) > 0:
-			self.new_card = repeatcards[0]
+			shuffled_List.remove(self.new_card)
+		elif len(repeat_cards) > 0:
+			self.new_card = repeat_cards[0]
 			self.currentCard.clear()
 			self.currentCard.append(self.new_card)
-			repeatcards.remove(self.new_card)
+			repeat_cards.remove(self.new_card)
 			self.repeatList.clear()
-			self.repeatList.addItems(repeatcards)
+			self.repeatList.addItems(repeat_cards)
 		else:
 			self.currentCard.clear()
 			
 			
 	def addCurrentToRepeat(self):
-		global shuffledList,repeatcards
-		if len(shuffledList) > 0:
-			rtxt = add_item(repeatcards,self.new_card)
+		global shuffled_List,repeat_cards
+		if len(shuffled_List) > 0:
+			rtxt = add_item(repeat_cards, self.new_card)
 			self.repeatList.clear()
 			self.repeatList.addItems(rtxt)
-			self.new_card = shuffledList[0]
+			self.new_card = shuffled_List[0]
 			self.currentCard.clear()
 			self.currentCard.append(self.new_card)
-			shuffledList.remove(self.new_card)
+			shuffled_List.remove(self.new_card)
 		else:
 			return
 
 	def get_file_content(self):
-		global shuffledList,repeatcards
+		global shuffled_List,repeat_cards
 		filename = QtWidgets.QFileDialog.getOpenFileName(None, 'Open file')[0]
-		if filename is '':
+		if filename == '':
 			return ''
 		try:
 			with open(filename, encoding='utf8') as file:
 				inputfile = file.read().splitlines()
 				try:
-					shuffledList = random.sample(inputfile, len(inputfile))
+					shuffled_List = random.sample(inputfile, len(inputfile))
 				except Exception as e:
 					QMessageBox.warning(None, 'Can not open file', 'Can not open file {}:\n{}'.format(filename, e))
 					return ''
